@@ -19,4 +19,4 @@ def superuser_login(request):
     return render(request, 'login.html')
 def deconnexion(request) :
     logout(request)
-    return redirect("login")
+    return redirect("home")

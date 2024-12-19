@@ -354,3 +354,6 @@ def download_pdf(request, person_id):
     c.save()
 
     return response
+
+def Resansman(request) :
+    return render(request, "home/service.html")
