@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'superuser_login',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

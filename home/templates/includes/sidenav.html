@@ -32,37 +32,15 @@
               <span class="nav-link-text">Register</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {% if 'profile' in segment %} active {% endif %}" href="/profile.html">
-              <i class="ni ni-single-02 text-yellow"></i>
-              <span class="nav-link-text">Profile</span>
-            </a>
-          </li>
+          
           <li class="nav-item">
             <a class="nav-link {% if 'tables' in segment %} active {% endif %}" href="{% url 'model_counts_view' %}">
               <i class="ni ni-bullet-list-67 text-default"></i>
               <span class="nav-link-text">Departement</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login.html">
-              <i class="ni ni-key-25 text-info"></i>
-              <span class="nav-link-text">Login (template)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/register.html">
-              <i class="ni ni-circle-08 text-pink"></i>
-              <span class="nav-link-text">Register (template)</span>
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'register' %}">
-              <i class="ni ni-user-run text-red"></i>
-              <span class="nav-link-text">Logout</span>
-            </a>
-          </li>            
+         
+                
         </ul>
         <!-- Divider -->
         <hr class="my-3">
@@ -73,30 +51,23 @@
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
 
-          <li class="nav-item">
-            <a class="nav-link" 
-               target="_blank" 
-               href="https://appseed.us/admin-dashboards/django-dashboard-argon">
-              <i class="ni ni-archive-2"></i>
-              <span class="nav-link-text">Product Page</span>
-            </a>
-          </li>
+        
 
           <li class="nav-item">
             <a class="nav-link" 
                target="_blank" 
-               href="https://appseed.us/admin-dashboards/django-dashboard-argon-pro">
+               href="{% url 'deconnexion' %}">
               <i class="ni ni-spaceship text-red"></i>
-              <span class="nav-link-text text-red">PRO Version</span>
+              <span class="nav-link-text text-red">Deconnexion</span>
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link active active-pro" 
                target="_blank" 
-               href="http://appseed.us">
+               href="{% url 'home' %}">
               <i class="ni ni-send text-dark"></i>
-              <span class="nav-link-text">AppSeed</span>
+              <span class="nav-link-text">Hatie</span>
             </a>
           </li>
         </ul>
