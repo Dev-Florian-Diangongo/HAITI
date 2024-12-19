@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Agent de Développement</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+            font-family: 'Arial', sans-serif;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-row {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container my-5">
+        <div class="form-container">
+            <h2 class="form-header">Enskripsyon Ajans Devlopman</h2>
+            {% if message %}
+    <h6 style="color:red; margin-top:2%;font-weight:bold;" class="form-header"> {{message}} </h6>
+    {% endif %}
+    {% if messages %}
+    <h6 style="color:green; margin-top:2%;font-weight:bold;" class="form-header"> {{messages}} </h6>
+     <a href="{% url 'home' %}"><h4 style="color:green; margin-top:2%;font-weight:bold;" class="form-header">   retour  </h4> </a>
+    {% endif %}
+            <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+                <div class="row">
+                    <!-- Départment -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="departement" class="form-label"> Ki depatman ou sòti? <span style="color:red;"> * </span></label>
+                            <select name="departement" id="departement" class="form-select" required>
+                                <option value="Lwes">Lwès</option>
+                                <option value="No">Nò</option>
+                                <option value="Nodes">Nòdès</option>
+                                <option value="Nodwes">Nòdwès</option>
+                                <option value="Sid">Sid</option>
+                                <option value="Sides">Sidès</option>
+                                <option value="Grandans">Grandans</option>
+                                <option value="Nip">Nip</option>
+                                <option value="Sant">Sant</option>
+                                <option value="Latibonit">Latibonit</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Prénom -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label">Prénom <span style="color:red;"> * </span></label>
+                            <input type="text" name="prenom" id="prenom" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Nom -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Nom <span style="color:red;"> * </span></label>
+                            <input type="text" name="nom" id="nom" class="form-control" required>
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adrès Imèl <span style="color:red;"> * </span></label>
+                            <input type="email" name="email" id="email" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Téléphone -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="telephone" class="form-label">Nimewo Telefòn <span style="color:red;"> * </span></label>
+                            <input type="tel" name="telephone" id="telephone" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Sexe -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="sexe" class="form-label">Sèks <span style="color:red;"> * </span></label>
+                            <select name="sexe" id="sexe" class="form-select" required>
+                                <option value="Homme">Gason</option>
+                                <option value="Femme">Fi</option>
+                                <option value="da_defini">Pa defini</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Date de naissance -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="date_naissance" class="form-label">Dat Nesans <span style="color:red;"> * </span></label>
+                            <input type="date" name="date_naissance" id="date_naissance" class="form-control" required>
+                        </div>
+                    </div>
+                    <!-- Photo -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="photo_identite" class="form-label">Foto Idantite <span style="color:red;"> * </span></label>
+                            <input type="file" name="photo_identite" id="photo_identite" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Pays de résidence -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="pays_residence" class="form-label">Peyi Kote Ou Ap Viv <span style="color:red;"> * </span></label>
+                            <input type="text" name="pays_residence" id="pays_residence" class="form-control" required>
+                        </div>
+                    </div>
+                    <!-- Ville -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="ville" class="form-label">Vil Ou Ap Viv <span style="color:red;"> * </span></label>
+                            <input type="text" name="ville" id="ville" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Disponibilité -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="disponibilite" class="form-label">Eske Ou Disponib Pou Vwayaje? <span style="color:red;"> * </span></label>
+                            <select name="disponibilite" id="disponibilite" class="form-select" required>
+                                <option value="Oui">Wi</option>
+                                <option value="Non">Non</option>
+                                <option value="Peut-être">Petèt</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Langues parlées -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="langues_parlees" class="form-label">Ki Lang Ou Pale? <span style="color:red;"> * </span></label>
+                            <select name="langues_parlees" id="langues_parlees" class="form-select">
+                                <option value="Creole">Kreyòl Ayisyen</option>
+                                <option value="Anglais">Anglais</option>
+                                <option value="Espagnol">Espanyòl</option>
+                                <option value="Français">Franse</option>
+                                <option value="Autre">Lòt</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Explication origine -->
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="explication_origine" class="form-label">Ki Orijin Ou An Ayiti?</label>
+                            <textarea name="explication_origine" id="explication_origine" class="form-control" rows="4"  ></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Engagement communautaire -->
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="engagement_communautaire" class="form-label">Aktivite Kominotè Ou Te Patisipe Nan</label>
+                            <textarea name="engagement_communautaire" id="engagement_communautaire" class="form-control" rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Disponibilité pour contribuer -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="disponibilite_contribuer" class="form-label">Eske Ou Disponib Pou Kontribye? <span style="color:red;"> * </span></label>
+                            <select name="disponibilite_contribuer" id="disponibilite_contribuer" class="form-select">
+                                <option value="À distance">A Distans</option>
+                                <option value="En personne">An Pèson</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Voye fòmilè ya </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

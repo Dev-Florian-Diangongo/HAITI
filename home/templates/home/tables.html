@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Tables {% endblock title %}
+
+{% block content %}
+
+<!-- Table affichant les départements et le nombre de personnes -->
+<table class="table align-items-center table-flush">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Nom du département</th>
+      <th scope="col">Nombre de personnes</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for record in model_counts %}
+      <tr>
+        <!-- Nom du département -->
+        <td>
+          {{ record.model_name }}
+        </td>
+        <!-- Nombre de personnes dans ce département -->
+        <td>
+         
+            {{ record.count }}
+         
+        </td>
+
+        <td>
+          <a href="{% url 'view_people' model_name=record.model_name %}">
+            voir plus
+          </a>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% include "includes/footer.html" %}
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}{% endblock javascripts %}

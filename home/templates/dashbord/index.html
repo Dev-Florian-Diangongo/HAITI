@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Resansman djaspora</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- JavaScript Libraries -->
+   
+
+   
+    <!-- Libraries Stylesheet -->
+      {% load static %}
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+     <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!-- Template Stylesheet -->
+     
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">DGital</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="{% url 'home' %}" class="nav-item nav-link active">Byenvini</a>
+                        <a href="{% url 'register' %}" class="nav-item nav-link">Rejwenn Nou</a>
+                        <a href="{% url 'home' %}" class="nav-item nav-link">forum</a>
+                    </div>
+                    <a href="" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Get Started</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5 align-items-end">
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated slideInDown">Rejwenn nou kounya</h1>
+                            <p class="text-white pb-3 animated slideInDown">
+                                Ranpli fòmilè a
+                                <br>
+                                Ede depatman w lan
+                                <br>
+                                Patisipe nan chanjman an</p>
+                            <a href="{% url 'register' %}" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">ANN FÈ DE RÈV YO YON REYALITE JODIA</a>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-start">
+                            <img class="img-fluid animated zoomIn" src="{% static 'img/hero.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h2 class="mb-5">Kisa resansman Djaspora ye ? </h2>
+                        <p class="mb-4">Depi plizyè ane, fenomèn imigrasyon fòse Ayiti pèdi yon gwo kantite entèlektyèl ak pwofesyonèl ki te ka pote kontribisyon esansyèl pou devlopman peyi a. Anpil jèn gason ak fanm, chaje ak talan, fòmasyon, ak rèv pou ede peyi yo, oblije kite tè natif natal yo akoz yon leta mal òganize, ensekirite, ak mank opòtinite. Lòtbò dlo, yo chache yon lavi miyò men souvan konfronte difikilte ki fè yo bliye rasin yo.
+                            <br>
+                        Resansman Djaspora, yon inisyativ vanyan Tching Adams Réjouis (TAR), se yon pwojè vizyonè ki gen pou misyon kreye yon pon solid ant djaspora ayisyen an ak peyi manman an. Inisyativ sa a pa sèlman ap ede rekonèt ak konekte kapasite djaspora a, men li vize tou soutni Ayisyen yo k ap retounen, espesyalman sa yo ki viktim depòtasyon, pou yo jwenn yon fason entegre tèt yo nan sosyete a san yo pa oblije rekòmanse lavi yo nan zewo.</p>
+                        <a href="" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Konnen plis</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/img1.webp' %}">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Facts Start -->
+        <div class="container-xxl bg-primary fact py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up">{{lwes}}</h1>
+                        <p class="text-white mb-0">Lwès                        </p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up">{{no}}</h1>
+                        <p class="text-white mb-0">Nò</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up">{{nodes}}</h1>
+                        <p class="text-white mb-0">Nòdès</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up">{{nodwes}}</h1>
+                        <p class="text-white mb-0">Nòdwès</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up">{{sid}}</h1>
+                        <p class="text-white mb-0">Sid</p>
+                    </div> <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up"> {{sides}} </h1>
+                        <p class="text-white mb-0">Sides</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up"> {{grandans}} </h1>
+                        <p class="text-white mb-0">Grandans</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up"> {{nip}} </h1>
+                        <p class="text-white mb-0">Nip</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                        <h1 class="text-white mb-2" data-toggle="counter-up"> {{sant}} </h1>
+                        <p class="text-white mb-0">Sant</p>
+                    </div>
+                    <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s" id="">
+                        <h1 class="text-white mb-2" data-toggle="counter-up"> {{latibonit}} </h1>
+                        <p class="text-white mb-0">Latibonit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Facts End -->
+
+
+        <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span>Resansman Djaspora                        <span></span></p>
+                    <h1 class="text-center mb-5">chita sou 5 gwo pwen•</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-check fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">RE-ENTEGRASYON</h5>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-check fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">ÒGANIZASYON</h5>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-check fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">PLAN AKSYON</h5>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-check fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">PLANIFIKASYON</h5>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <div class="service-icon flex-shrink-0">
+                                <i class="fa fa-check fa-2x"></i>
+                            </div>
+                            <h5 class="mb-3">REYALIZASYON</h5>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+                <!-- About Start -->
+                <div class="container-xxl py-5">
+                    <div class="container py-5 px-lg-5">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6">
+                                <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/bgf.jpg' %}">
+                            </div>
+                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="mb-5">RE-ENTEGRASYON</h2>
+                                <p class="mb-4">Tout Ayisyen yo pral depòte isit yo,pa initil,ni viktim,se sòlda yo voye tounen ba nou pou mete men nan chanjman nouvèl Ayiti a. Yo te jis al pran fòmasyon an lòt kote pou itil peyi yo. Kounya jou a rive pou nou rebati lakay avèk konesans nou tal pran lòt kote. Chak Ayisyen ki retounen sipoze jwenn kote pou li egziste antanke sitwayen kap kontribiye nan devlopman kominote l pandan lap itil tèt li an menm tan. Nan KREYASYON ak EKSPLWATASYON resous ki a dispozisyon nou yo nan zòn stratejik yo. Konsa chak grenn oubyen chak gwoup djaspora ap kapab patisipe aktivman nan bon fonksyònman kominote li nan mete mwayen pou li egziste antanke manm yon vil oubyen yon pwovens ki gen anpil potansyèl men ki pa gen moun ki pou itilize potansyèl sa yo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-xxl py-5">
+                    <div class="container py-5 px-lg-5">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-6">
+                                <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/nn.jpg' %}">
+                            </div>
+                            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                                <h2 class="mb-5">ÒGANIZASYON</h2>
+                                <p class="mb-4">
+                                    Leta pa sèl mekanism ki ka ede nou e lèl absan fòk nou kreye yon lòt sistèm endepandan de li pou nou sove tèt nou. Jis nou rive estabilize resous nou genyen nan men nou pou nou abouti ak rezilta ki ap bon pou nou. Paske si n pa mete tèt ansanm pou nou sove tèt nou nan pran bon jan desizyon. Pèsonn pap fèl pou nou. Nan sans sila a nou bezwen antre nan yon sistèm ki deja tabli e byen òganize pou nou vanse nan tout aktivite,evènman oubyen mouvman nou ta dwe mennen pou byennèt kolektif la. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+                 <!-- Service Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/descarga.jpeg' %}">
+                            <h5 class="mb-3">PLAN AKSYON</h5>
+                            <p class="m-0">Vin patisipe avèk nou nan yon pwojè devlopman ki fèw plezi. Envesti e kreye avèk nou. Pou nou bay tèt nou yon chans e timoun kap grandi yo asire yo yon demen miyò.</p>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/descarga-1.jpeg' %}">
+                            <h5 class="mb-3">PLANIFIKASYON</h5>
+                            <p class="m-0">Bon jan estrateji se bon jan rezilta asire. Nou konn kisa nou vle. Nou dwe konnen kisa nap fè.                            </p>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="service-item d-flex flex-column text-center rounded">
+                            <img class="img-fluid wow zoomIn" data-wow-delay="0.5s" src="{% static 'img/descarga-2.jpeg' %}">
+                            <h5 class="mb-3">REYALIZASYON</h5>
+                            <p class="m-0">FÈ DE RÈV YO. YON REYALITE</p>
+                            <a class="btn btn-square" href=""><i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img class="img-fluid" src="{% static 'img/portfolio-1.jpg' %}" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="{% static 'img/portfolio-2.jpg' %}" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="{% static 'img/portfolio-3.jpg' %}" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="{% static 'img/portfolio-4.jpg' %}" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="{% static 'img/portfolio-5.jpg' %}" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="{% static 'img/portfolio-6.jpg' %}" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="#">Rejwenn Nou</a>
+                                <a href="">Resansman Djaspora</a>
+                                <a href="">Blog</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="{% static 'js/main.js' %}"></script>
+     <script src="{% static 'js/main.js' %}"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="{% static 'js/counterup.min.js' %}"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+        
+</body>
+
+</html>
