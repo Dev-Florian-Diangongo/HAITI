@@ -1,7 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6222CC;
-    --secondary: #FBA504;
+    --primary: red;
+    --secondary: red;
     --light: #F6F4F9;
     --dark: #04000B;
 }
@@ -118,11 +118,11 @@ h6,
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-    color: var(--secondary) !important;
+    color: red;
 }
 
 .navbar-light .navbar-brand h1 {
-    color: #FFFFFF;
+    color: red;
 }
 
 .navbar-light .navbar-brand img {
