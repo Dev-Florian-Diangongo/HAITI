@@ -54,9 +54,9 @@ def Register_in_all_table(request) :
         je veux verifier les champs requis: nom, departement, ...
         
         """
-        if departement is None or prenom is None or nom is None or email is None or sexe is None or date_naissance is None or photo_identite is None or pays_residence is None or ville is None or disponibilite is None or disponibilite_contribuer is None or langues_parlees is None :
-            message = "certains obligatoires en etoile rouge ne sont pas remplis !"
-            return request(request, "dashobord/login.html", context={"message":message})
+        if departement is None or prenom is None or nom is None or email is None or sexe is None or date_naissance is None  or pays_residence is None or ville is None or disponibilite is None or disponibilite_contribuer is None or langues_parlees is None :
+            message = "certains champ obligatoires en etoile rouge ne sont pas remplis !"
+            return render(request, "dashbord/login.html", context={"message":message})
         try : 
             """
 
@@ -107,93 +107,93 @@ def Register_in_all_table(request) :
                         "disponibilite_contribuer" :disponibilite_contribuer}
             if departement == "Lwes" :
                     if Lwes.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                     user_create = Lwes.objects.create(**datas)
                     user_create.save()
                     if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})
             elif departement == 'No' :
                 if No.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                 user_create = No.objects.create(**datas)
                 user_create.save()
                 if user_create:
-                    message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                    message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                     return render(request, "dashbord/login.html", context={"messages":message})
             elif departement == "Nodes" :
                 if Nodes.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                 user_create = Nodes.objects.create(**datas)
                 user_create.save()
                 if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})
             elif departement == "Nodwes" :
                 if Nodwes.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                 user_create = Nodwes.objects.create(**datas)
                 user_create.save()
                 if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})   
             elif departement == "Sid" :
                 if Sid.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                 user_create = Sid.objects.create(**datas)
                 user_create.save()
                 if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})   
             elif departement == "Sides" :
                     if Sides.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                     user_create = Sides.objects.create(**datas)
                     user_create.save()
                     if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})   
             elif departement == "Grandans" :
                     if Grandans.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                     user_create = Grandans.objects.create(**datas)
                     user_create.save()
                     if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})   
             elif departement == "Nip" :
                     if Nip.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                     user_create = Nip.objects.create(**datas)
                     user_create.save()
                     if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})   
             elif departement == "Sant" :
                     if Sant.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                     user_create = Sant.objects.create(**datas)
                     user_create.save()
                     if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})   
             elif departement == "Latibonit" :
                     if Latibonit.objects.filter(email=email).exists():
-                        message = f"l'email suivant :'{email}' existe déjà  "
+                        message = f"Imèl sa déjà anrejistre. Silvouplè itilize yon lòt. :'{email}'  "
                         return render(request, "dashbord/login.html", context={"message":message})
                     user_create = Latibonit.objects.create(**datas)
                     user_create.save()
                     if user_create:
-                        message = f"Nous avons bien réçu votre formulaire pour le departement {departement}"
+                        message = f"Mèsi paske w soumèt enfòmasyon w yo bay Resansman Djaspora! {departement}"
                         return render(request, "dashbord/login.html", context={"messages":message})   
             else :
                 message = f" '{departement}' n'est pas pris en en charge"

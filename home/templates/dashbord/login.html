@@ -52,18 +52,32 @@
                             <a href="{% url 'home' %}" class="nav-item nav-link active">Byenvini</a>
                             <a href="{% url 'register' %}" class="nav-item nav-link">Rejwenn Nou</a>
                             <a href="{% url 'Resansman' %}" class="nav-item nav-link">Resansman Djaspora</a>
-                            <a href="#" class="nav-item nav-link">Blog</a>
+                            <a href="#" class="nav-item nav-link">Forum</a>
                         </div>
                     </div>
                 </nav>
 
-   <br>
-
+                <div class="container-xxl bg-primary hero-header">
+                    <div class="container px-lg-5">
+                        <div class="row g-5 align-items-end">
+                            <div class="col-lg-6 text-center text-lg-start">
+                                <h1 class="text-white mb-4 animated slideInDown">Rejwenn Nou</h1>
+                                <p class="text-white pb-3 animated slideInDown">Siw vle vinn yon Ajan devlopman pou lakay ou</p>
+                                
+                            </div>
+                            <div class="col-lg-6 text-center text-lg-start">
+                                <img class="img-fluid animated zoomIn" src="{% static 'img/hero.png' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
     
     <div class="container my-5">
         <div class="form-container">
-            <h2 class="form-header">Enskripsyon Ajans Devlopman</h2>
+            <h3 class="form-header"></h3>
+            <h4 class="form-header"></h4>
             {% if message %}
     <h6 style="color:red; margin-top:2%;font-weight:bold;" class="form-header"> {{message}} </h6>
     {% endif %}
@@ -74,11 +88,134 @@
             <form method="post" enctype="multipart/form-data">
             {% csrf_token %}
                 <div class="row">
+
+
+                    <h5 class="form-body"><strong> Enfòmasyon Pèsonèl </strong></h5>
+
+
+                      <!-- Prénom -->
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="prenom" class="form-label">Non <span style="color:red;"> * </span></label>
+                            <input type="text" name="prenom" id="prenom" class="form-control" required placeholder="Premye nonw">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Nom -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="nom" class="form-label">Siyati<span style="color:red;"> * </span></label>
+                            <input type="text" name="nom" id="nom" class="form-control" required placeholder="Siyati">
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Adrès Imèl <span style="color:red;"> * </span></label>
+                            <input type="email" name="email" id="email" class="form-control" required placeholder="Pou kominikasyon ak koneksyon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Téléphone -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="telephone" class="form-label">Nimewo Telefòn <span style="color:red;"> * </span></label>
+                            <input type="tel" name="telephone" id="telephone" class="form-control" placeholder="Opsyonèl, pou kontak dirèk">
+                        </div>
+                    </div>
+                    <!-- Sexe -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="sexe" class="form-label">Sèks <span style="color:red;"> * </span></label>
+                            <select name="sexe" id="sexe" class="form-select" required>
+                                <option value="">sèks</option>
+                                <option value="Homme">Gason</option>
+                                <option value="Femme">Fi</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!-- Date de naissance -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="date_naissance" class="form-label">Dat Nesans <span style="color:red;"> * </span></label>
+                            <input type="date" name="date_naissance" id="date_naissance" class="form-control" required placeholder="Dat Nesans">
+                        </div>
+                    </div>
+                    <!-- Photo -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="photo_identite" class="form-label">Foto idantitew <span style="color:red;"> </span></label>
+                            <input type="file" name="photo_identite" id="photo_identite" class="form-control" placeholder="chwazi Ou poko chwazi">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <h5 class="form-body"><strong>Kote Kounye a </strong></h5>
+
+
+                <div class="row">
+                    <!-- Pays de résidence -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="pays_residence" class="form-label">Peyi Rezidan <span style="color:red;"> * </span></label>
+                            <input type="text" name="pays_residence" id="pays_residence" class="form-control" required placeholder="Ekri kote wap viv pandan wap ranpli fòmilè sa a"> 
+                        </div>
+                    </div>
+                    <!-- Ville -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="ville" class="form-label">Vil  <span style="color:red;"> * </span></label>
+                            <input type="text" name="ville" id="ville" class="form-control" required placeholder="Nan ki vil ou ye kounye ya? " >
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <!-- Disponibilité -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="disponibilite" class="form-label">Disponiblite pou Deplase <span style="color:red;"> * </span></label>
+                            <select name="disponibilite" id="disponibilite" class="form-select" required placeholder="Eskew ka rantre Ayiti ?">
+                                <option value="Oui">Wi</option>
+                                <option value="Non">Non</option>
+                                <option value="Peut-être">Petèt</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <!-- Explication origine -->
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="explication_origine" class="form-label">Ba nou yon ti explikasyon sou kote ou soti an Ayiti</label>
+                                <textarea name="explication_origine" id="explication_origine" class="form-control" rows="4" required  placeholder="Ajoute tou depi kilè ou kite Ayiti epi ki dènye kote ou vizite Ayiti. "></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
                     <!-- Départment -->
                     <div class="col-md-6">
                         <div class="mb-3">
-                            <label for="departement" class="form-label"> Ki depatman ou sòti? <span style="color:red;"> * </span></label>
-                            <select name="departement" id="departement" class="form-select" required>
+                            <label for="departement" class="form-label"> Nan ki depatman wap vini <span style="color:red;"> * </span></label>
+                            <select name="departement" id="departement" class="form-select" required placeholder="">
                                 <option value="Lwes">Lwès</option>
                                 <option value="No">Nò</option>
                                 <option value="Nodes">Nòdès</option>
@@ -92,149 +229,284 @@
                             </select>
                         </div>
                     </div>
-                    <!-- Prénom -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="prenom" class="form-label">Prénom <span style="color:red;"> * </span></label>
-                            <input type="text" name="prenom" id="prenom" class="form-control" required>
+
+                   
+                    <h5 class="form-body"><strong> Edikasyon ak Kalifikasyon </strong></h5>
+
+
+                    <div class="row">
+                        <!-- Engagement communautaire -->
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label for="engagement_communautaire" class="form-label">Ba nou yon explikasyon sou domèn etid ou </label>
+                                <textarea name="engagement_communautaire" id="engagement_communautaire" class="form-control" rows="4" placeholder="Kalifikasyon (egzanp: diplòm, lisans, doktora, ,entitisyon ou etidye, epi ane ou
+finn etidye) "></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+
+
+
+
                 
-                <div class="row">
-                    <!-- Nom -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="nom" class="form-label">Nom <span style="color:red;"> * </span></label>
-                            <input type="text" name="nom" id="nom" class="form-control" required>
-                        </div>
-                    </div>
-                    <!-- Email -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Adrès Imèl <span style="color:red;"> * </span></label>
-                            <input type="email" name="email" id="email" class="form-control" required>
-                        </div>
-                    </div>
-                </div>
+                  
+                    
+<!-- Langues parlées -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label for="langues_parlees" class="form-label">Ki Lang Ou Pale? <span style="color:red;"> * </span></label>
+        <select name="langues_parlees[]" id="langues_parlees" class="form-select" multiple>
+            <option value="Creole">Kreyòl Ayisyen</option>
+            <option value="Ris">Ris</option>
+            <option value="Angle">Angle</option>
+            <option value="Espagnol">Panyòl</option>
+            <option value="Français">Franse</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Alman">Alman</option>
+            <option value="Pòtigè">Pòtigè</option>
+            <option value="Italyen">Italyen</option>
+            <option value="Arab">Arab</option>
+            <option value="Hausa">Hausa</option>
+            <option value="Japonnè">Japonnè</option>
+            <option value="Koreyen">Koreyen</option>
+            <option value="Tik">Tik</option>
+            <option value="Vyètnamien">Vyètnamien</option>
+            <option value="Tay">Tay</option>
+            <option value="Bengalè">Bengalè</option>
+            <option value="pès">Pes</option>
+            <option value="Urdu">Urdu</option>
+        </select>
+        
+        <!-- Champ d'ajout d'une nouvelle langue -->
+        <label for="nouvelle_langue" class="form-label mt-2"> lòt lang (si li pa nan lis la)</label>
+        <input type="text" id="nouvelle_langue" name="nouvelle_langue" class="form-control" placeholder="Lòt lang" />
 
-                <div class="row">
-                    <!-- Téléphone -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="telephone" class="form-label">Nimewo Telefòn <span style="color:red;"> * </span></label>
-                            <input type="tel" name="telephone" id="telephone" class="form-control">
-                        </div>
-                    </div>
-                    <!-- Sexe -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="sexe" class="form-label">Sèks <span style="color:red;"> * </span></label>
-                            <select name="sexe" id="sexe" class="form-select" required>
-                                <option value="Homme">Gason</option>
-                                <option value="Femme">Fi</option>
-                                <option value="da_defini">Pa defini</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+    </div>
+</div>
 
-                <div class="row">
-                    <!-- Date de naissance -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="date_naissance" class="form-label">Dat Nesans <span style="color:red;"> * </span></label>
-                            <input type="date" name="date_naissance" id="date_naissance" class="form-control" required>
-                        </div>
-                    </div>
-                    <!-- Photo -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="photo_identite" class="form-label">Foto Idantite <span style="color:red;"> * </span></label>
-                            <input type="file" name="photo_identite" id="photo_identite" class="form-control">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <!-- Pays de résidence -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="pays_residence" class="form-label">Peyi Kote Ou Ap Viv <span style="color:red;"> * </span></label>
-                            <input type="text" name="pays_residence" id="pays_residence" class="form-control" required>
-                        </div>
-                    </div>
-                    <!-- Ville -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="ville" class="form-label">Vil Ou Ap Viv <span style="color:red;"> * </span></label>
-                            <input type="text" name="ville" id="ville" class="form-control" required>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <!-- Disponibilité -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="disponibilite" class="form-label">Eske Ou Disponib Pou Vwayaje? <span style="color:red;"> * </span></label>
-                            <select name="disponibilite" id="disponibilite" class="form-select" required>
-                                <option value="Oui">Wi</option>
-                                <option value="Non">Non</option>
-                                <option value="Peut-être">Petèt</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- Langues parlées -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="langues_parlees" class="form-label">Ki Lang Ou Pale? <span style="color:red;"> * </span></label>
-                            <select name="langues_parlees" id="langues_parlees" class="form-select">
-                                <option value="Creole">Kreyòl Ayisyen</option>
-                                <option value="Anglais">Anglais</option>
-                                <option value="Espagnol">Espanyòl</option>
-                                <option value="Français">Franse</option>
-                                <option value="Autre">Lòt</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <!-- Explication origine -->
-                    <div class="col-md-12">
-                        <div class="mb-3">
-                            <label for="explication_origine" class="form-label">Ki Orijin Ou An Ayiti?</label>
-                            <textarea name="explication_origine" id="explication_origine" class="form-control" rows="4"  ></textarea>
-                        </div>
-                    </div>
-                </div>
+<h5 class="form-body"><strong>Eksperyans Pwofesyonèl</strong></h5>
+
+
+
+
+
+            
+               
+
 
                 <div class="row">
                     <!-- Engagement communautaire -->
                     <div class="col-md-12">
                         <div class="mb-3">
-                            <label for="engagement_communautaire" class="form-label">Aktivite Kominotè Ou Te Patisipe Nan</label>
-                            <textarea name="engagement_communautaire" id="engagement_communautaire" class="form-control" rows="4"></textarea>
+                            <label for="engagement_communautaire" class="form-label">Pale nou yon ti kras de travay ou ye kounya.</label>
+                            <textarea name="engagement_communautaire" id="engagement_communautaire" class="form-control" rows="4" placeholder="Pa egzanp tit ou . ki saw ye nan travay la? Nan ki konpayi wap travay?"></textarea>
                         </div>
                     </div>
                 </div>
 
-                <div class="row">
-                    <!-- Disponibilité pour contribuer -->
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="disponibilite_contribuer" class="form-label">Eske Ou Disponib Pou Kontribye? <span style="color:red;"> * </span></label>
-                            <select name="disponibilite_contribuer" id="disponibilite_contribuer" class="form-select">
-                                <option value="À distance">A Distans</option>
-                                <option value="En personne">An Pèson</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+
+
+
+
+
+                <!-- Choix du type de travail -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label class="form-label">Kijan ou ta renmen travay? <span style="color:red;"> * </span></label><br>
+
+        <!-- Boutons radio pour travail à plein temps ou à temps partiel -->
+        <input type="radio" id="plein_temps" name="type_travail" value="Plein temps" class="form-check-input">
+        <label for="plein_temps" class="form-check-label">Travay a plen tan</label><br>
+
+        <input type="radio" id="partiel" name="type_travail" value="Temps partiel" class="form-check-input">
+        <label for="partiel" class="form-check-label">Travay a tan pasyèl</label>
+
+    </div>
+</div>
+
+
+
+<!-- Choix des régions où l'utilisateur réside -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label class="form-label">Nan ki rejyon ou gen moun an Ayiti? <span style="color:red;"> * </span></label><br>
+
+        <!-- Cases à cocher pour les différentes régions -->
+        <input type="checkbox" id="lwes" name="regions[]" value="Lwès" class="form-check-input">
+        <label for="lwes" class="form-check-label">Lwès</label><br>
+
+        <input type="checkbox" id="nord" name="regions[]" value="Nò" class="form-check-input">
+        <label for="nord" class="form-check-label">Nò</label><br>
+
+        <input type="checkbox" id="nord_est" name="regions[]" value="Nòdès" class="form-check-input">
+        <label for="nord_est" class="form-check-label">Nòdès</label><br>
+
+        <input type="checkbox" id="nord_west" name="regions[]" value="Nòdwès" class="form-check-input">
+        <label for="nord_west" class="form-check-label">Nòdwès</label><br>
+
+        <input type="checkbox" id="sid" name="regions[]" value="Sid" class="form-check-input">
+        <label for="sid" class="form-check-label">Sid</label><br>
+
+        <input type="checkbox" id="sides" name="regions[]" value="Sidès" class="form-check-input">
+        <label for="sides" class="form-check-label">Sidès</label><br>
+
+        <input type="checkbox" id="grandans" name="regions[]" value="Grandans" class="form-check-input">
+        <label for="grandans" class="form-check-label">Grandans</label><br>
+
+        <input type="checkbox" id="nip" name="regions[]" value="Nip" class="form-check-input">
+        <label for="nip" class="form-check-label">Nip</label><br>
+
+        <input type="checkbox" id="latibonit" name="regions[]" value="Sant Latibonit" class="form-check-input">
+        <label for="latibonit" class="form-check-label">Sant Latibonit</label><br>
+
+    </div>
+</div>
+
+
+
+
+
+<!-- Koneksyon Kiltirèl -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label for="koneksyon_kiltirel" class="form-label">Koneksyon Kiltirèl <span style="color:red;"> * </span></label>
+        <textarea name="koneksyon_kiltirel" id="koneksyon_kiltirel" class="form-control" placeholder="Pale nou yon ti kras de kijan ou konekte ak kilti peyi Ayiti." rows="4"></textarea>
+    </div>
+</div>
+
+
+<!-- Angajman Kominotè -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label for="angajman_kominote" class="form-label">Angajman Kominotè <span style="color:red;"> * </span></label>
+        <textarea name="angajman_kominote" id="angajman_kominote" class="form-control" placeholder="Deskripsyon sou aktivite oswa gwoup ou te patisipe an Ayiti." rows="4"></textarea>
+    </div>
+</div>
+
+
+
+<h5 class="form-body"><strong>Enterè nan Rebati</strong></h5>
+
+
+<!-- Disponiblite pou Kontribye -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label class="form-label">Disponiblite pou Kontribye <span style="color:red;"> * </span></label><br>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="disponibilite" id="a_distans" value="A distans" required>
+            <label class="form-check-label" for="a_distans">
+                A distans
+            </label>
+        </div>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="disponibilite" id="an_peson" value="An Pèson" required>
+            <label class="form-check-label" for="an_peson">
+                An Pèson
+            </label>
+        </div>
+    </div>
+</div>
+
+
+<h5 class="form-body"><strong>Zòn Enterè</strong></h5>
+
+
+<!-- Sektè -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label for="sekte" class="form-label">Sektè <span style="color:red;"> * </span></label>
+        <input type="text" name="sekte" id="sekte" class="form-control" placeholder="Egzanp: Edikasyon, Swen Sante, Enfrastrikti, Agrikilti" required>
+    </div>
+</div>
+
+
+
+<!-- Preferans Wòl -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label class="form-label">Preferans Wòl <span style="color:red;"> * </span></label><br>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="preferans_wol" id="konsiltasyon" value="Konsiltasyon" required>
+            <label class="form-check-label" for="konsiltasyon">
+                Konsiltasyon
+            </label>
+        </div>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="preferans_wol" id="travay_direkt" value="Travay Direkt" required>
+            <label class="form-check-label" for="travay_direkt">
+                Travay Direkt
+            </label>
+        </div>
+        
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="preferans_wol" id="liderchip" value="Lidèchip" required>
+            <label class="form-check-label" for="liderchip">
+                Lidèchip
+            </label>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Pwojè Espesifik -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label for="pwoje_espesifik" class="form-label">Pwojè Espesifik <span style="color:red;"> * </span></label>
+        <textarea name="pwoje_espesifik" id="pwoje_espesifik" class="form-control" placeholder="Pale nou yon ti kras de Pwojè w la..." rows="4" required></textarea>
+    </div>
+</div>
+
+
+
+
+<h5 class="form-body"><strong>Preferans Kolaborasyon</strong></h5>
+
+
+<!-- Zouti Kolaborasyon -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label for="zouti_kolaborasyon" class="form-label">Zouti Kolaborasyon <span style="color:red;"> * </span></label>
+        <input type="text" name="zouti_kolaborasyon" id="zouti_kolaborasyon" class="form-control" placeholder="Egzanp: Slack, Teams, Trello, elatriye..." required>
+    </div>
+</div>
+
+
+<!-- Konsantman (partie engagement) -->
+<div class="col-md-6">
+    <div class="mb-3">
+        <label for="konsantman" class="form-label">Konsantman <span style="color:red;">  </span></label> <br>
+        <input type="checkbox" name="konsantman"></input> 
+        Mwen deside leve epi angajem nan batay la pou peyim...
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary" style="border:none;">Voye fòmilè ya </button>
+                    <button type="submit" class="btn btn-primary" style="border:none;"> voye fomilè </button>
                 </div>
             </form>
         </div>
